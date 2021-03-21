@@ -7,6 +7,7 @@ $battleship-grey: rgba(134, 135, 132, 1);
 $moss-green: rgba(117, 142, 79, 1); */
 
 body {
+  background-color: #ccf2f4;
   color: rgba(1, 22, 56, 1);
   font-size: 16px;
 }
@@ -160,7 +161,7 @@ input {
 }
 
 .white {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #ccf2f4;
   text-align: center;
   align-items: center;
   padding: 20px;
@@ -198,7 +199,7 @@ input {
 }
 
 .package-description {
-  padding: 100px 0px 200px 100px;
+  padding: 0px 0px 0px 100px;
   display: inline-block;
   font-size: 45px;
 }
@@ -210,4 +211,9 @@ input {
 .travel {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 2px solid rgba(95, 117, 142, 0.7);
+}
+
+.hrstyle {
+  border-style: dotted none none none;
+  border-width: 10px;
 }
