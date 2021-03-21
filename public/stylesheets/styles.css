@@ -7,6 +7,7 @@ $battleship-grey: rgba(134, 135, 132, 1);
 $moss-green: rgba(117, 142, 79, 1); */
 
 body {
+  background-color: #ccf2f4;
   color: rgba(1, 22, 56, 1);
   font-size: 16px;
 }
@@ -160,7 +161,7 @@ input {
 }
 
 .white {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #ccf2f4;
   text-align: center;
   align-items: center;
   padding: 20px;
