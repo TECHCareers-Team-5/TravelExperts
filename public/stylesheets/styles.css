@@ -7,6 +7,7 @@ $battleship-grey: rgba(134, 135, 132, 1);
 $moss-green: rgba(117, 142, 79, 1); */
 
 body {
+
   background-color: rgba(134, 135, 132, .1);
   color: rgba(1, 22, 56, 1);
   font-size: 16px;
@@ -193,7 +194,9 @@ input {
 }
 
 .contact-section {
-  text-align: center;
+  align-items: self-start;
+  justify-content: center;
+  display: flex;
 }
 
 .contact-header {
@@ -222,4 +225,8 @@ input {
 .hrstyle {
   border-style: dotted none none none;
   border-width: 10px;
+}
+
+.hidden {
+  display: none;
 }
