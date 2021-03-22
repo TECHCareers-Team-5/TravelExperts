@@ -27,4 +27,13 @@ router.post("/", (req, res, next) => {
   next();
 });
 
+router.get("/package", function (req, res, next) {
+  const {Package}=require('../models/package')
+  Package.find(function (err, results) {
+    if (err) return console.error(err);
+    console.log(results[0].PkgName);
+    res.render("register", { title: "Register" });
+  })
+});
+
 module.exports = router;
