@@ -1,0 +1,68 @@
+doctype html
+head
+  title Travel Experts
+  meta(name='description' content='This is the description')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,500&family=Raleway:ital,wght@0,100;0,400;0,700;1,100&display=swap')
+  link(rel='stylesheet' href='/stylesheets/styles.css')
+header
+  nav
+    ul.navbar
+      li
+        a(href='index') HOME
+      li
+        a(href='packages') PACKAGES
+      li.active
+        a(href='register') REGISTER
+      li
+        a(href='contact') CONTACT
+  h1.header Register
+  img(src='Images/Globe blue on transparent.png')
+div
+  #register
+    h1 Your Journey Begins Here
+    form(action='/register' method='POST')
+      div
+        label(for='CustFirstName') First Name
+        input(type='text' name='CustFirstName' id='CustFirstName' placeholder='First Name' required='')
+      div
+        label(for='CustLastName') Last Name
+        input(type='text' name='CustLastName' id='CustLastName' required='' placeholder='Last Name')
+      div
+        label(for='CustAddress') Street Address
+        input(type='text' name='CustAddress' id='CustAddress' required='' placeholder='Street Address')
+      div
+        label(for='CustCity') City
+        input(type='text' name='CustCity' id='CustCity' required='' placeholder='City')
+      div
+        label(for='CustProv') Province
+        input(type='text' name='CustProv' id='CustProv' required='' placeholder='Province (Abreviation)')
+      div
+        label(for='CustPostal') Postal Code
+        input(type='text' name='CustPostal' id='CustPostal' required='' placeholder='Postal Code')
+      div
+        label(for='CustHomePhone') Primary Phone Number
+        input(type='text' name='CustHomePhone' id='CustHomePhone' placeholder='XXX-XXX-XXXX' required='')
+      div
+        label(for='CustBusPhone') Business Phone Number
+        input(type='text' name='CustBusPhone' id='CustBusPhone' placeholder='XXX-XXX-XXXX')
+      div
+        label(for='CustEmail') Email
+        input#email(type='CustEmail' name='CustEmail' required='' placeholder='Email Address')
+      div
+        label(for='password') Password
+        input#password(type='password' name='password' required='' placeholder='Enter Password')
+      div
+        label(for='AgentId') Agent ID (Please leave blank if you are not an Agent)
+        input(type='text' name='AgentId' id='AgentId' placeholder='00')
+      button.button(type='submit' style='width:30%') SUBMIT
+  section
+    .browse-package2
+      h2 Travel Experts
+      p
+        a(href='contact')
+          button.button(type='button') CONTACT US &#x25BA;
+footer.main-footer
+  div
+    p
+      | &amp;copy 2020 Travel Experts Inc

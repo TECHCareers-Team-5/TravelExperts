@@ -7,7 +7,8 @@ $battleship-grey: rgba(134, 135, 132, 1);
 $moss-green: rgba(117, 142, 79, 1); */
 
 body {
-  background-color: #ffffff;
+
+  background-color: rgba(134, 135, 132, .1);
   color: rgba(1, 22, 56, 1);
   font-size: 16px;
 }
@@ -138,10 +139,16 @@ input {
 
 .navbar li {
   float: left;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(48, 21, 21);
   text-align: center;
   padding: 5px;
   text-decoration: none;
+}
+
+.navbar-right {
+  float: right;
+  list-style-type: none;
+  padding-right: 5px;
 }
 
 .active {
