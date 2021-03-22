@@ -56,8 +56,13 @@ const agentSchema = new mongoose.Schema({
   },
 
   AgencyId: {
-    type: Int32,
-    trim: Number,
+    type: Number,
+    trim: true,
+  },
+
+  AgtCommission: {
+    type: Number,
+    trim: true,
   },
 });
 
