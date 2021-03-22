@@ -217,3 +217,12 @@ input {
   border-style: dotted none none none;
   border-width: 10px;
 }
+
+.hidden {
+  display: none;
+}
+
+.button1,
+.button2 {
+  display: inline-block;
+}
