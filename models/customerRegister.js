@@ -78,4 +78,4 @@ const customersSchema = new mongoose.Schema({
 });
 
 // create a model Customers useing customersSchema
-module.exports.Customers = mongoose.model("Customers", customersSchema);
+module.exports.Customers = mongoose.model("Customer", customersSchema);
