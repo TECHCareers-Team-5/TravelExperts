@@ -6,10 +6,11 @@ var logger = require("morgan");
 
 const pug = require("pug");
 
-const url = "mongodb://localhost:27017";
+// const url = "mongodb://localhost:27017"; connected to Atlas instead via register model
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const registerRouter = require("./routes/register");
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/register", registerRouter);
 
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
@@ -42,18 +44,18 @@ app.use("/users", usersRouter);
 //   res.render("error");
 // });
 
-const { User } = require("./models/users");
+// const { User } = require("./models/users");  GV now using registerCustomer model and register router
 
-app.post("/register", (req, res) => {
-  console.log("Hello");
+// app.post("/register", (req, res) => {
+//   console.log("Hello");
 
-  const user = new User(req.body);
-  console.log(user);
-  user.save((err) => {
-    if (err) throw err;
-    res.redirect("/thankyou");
-  });
-});
+//   const user = new User(req.body);
+//   console.log(user);
+//   user.save((err) => {
+//     if (err) throw err;
+//     res.redirect("/thankyou");
+//   });
+// });
 
 app.use((req, res, next) => {
   res.status(404).render("error");
