@@ -138,10 +138,16 @@ input {
 
 .navbar li {
   float: left;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(48, 21, 21);
   text-align: center;
   padding: 5px;
   text-decoration: none;
+}
+
+.navbar-right {
+  float: right;
+  list-style-type: none;
+  padding-right: 5px;
 }
 
 .active {
