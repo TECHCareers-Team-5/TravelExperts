@@ -26,4 +26,8 @@ router.get("/thankyou", function (req, res, next) {
   res.render("thankyou", { title: "thankyou" });
 });
 
+router.get("/agents", function (req, res, next) {
+  res.render("agents", { title: "Agents" });
+});
+
 module.exports = router;

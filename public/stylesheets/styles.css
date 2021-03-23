@@ -80,7 +80,7 @@ input {
 }
 
 .browse-package {
-  background-image: url("/Images/southAfrica_L1.jpg");
+  background-image: url("/Images/hawaii2.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-attachment: fixed;
@@ -100,7 +100,7 @@ input {
 }
 
 .browse-package2 {
-  background-image: url("/Images/hotel_L1.jpg");
+  background-image: url("/Images/southAfrica_L1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -119,6 +119,13 @@ input {
   align-content: center;
 }
 
+.browse-package3 {
+  background-image: url("/Images/hawaii4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 400px;
+}
 .navbar {
   position: fixed;
   top: 0;
