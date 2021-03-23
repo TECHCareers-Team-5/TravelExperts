@@ -7,7 +7,7 @@ $battleship-grey: rgba(134, 135, 132, 1);
 $moss-green: rgba(117, 142, 79, 1); */
 
 body {
-  background-color: #ccf2f4;
+  background-color: rgba(134, 135, 132, 0.1);
   color: rgba(1, 22, 56, 1);
   font-size: 16px;
 }
@@ -49,7 +49,7 @@ input {
 
 .button {
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(95, 117, 142, 1);
+  background-color: rgba(95, 117, 142, 0.5);
   border: 2px solid;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -59,27 +59,28 @@ input {
 .button:hover {
   box-shadow: none;
   border-color: rgba(117, 142, 79, 1);
+  background-color: rgba(95, 117, 142, 1);
 }
 
 .action {
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(117, 142, 79, 1);
+  background-color: rgba(117, 142, 79, 0.7);
   border: 2px solid rgba(1, 22, 56, 1);
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 40%;
-  padding: 5%;
+  padding: 10px;
   margin: 10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .action:hover {
   box-shadow: none;
   border-color: rgba(134, 135, 132, 1);
+  background-color: rgba(117, 142, 79, 1);
 }
 
 .browse-package {
-  background-image: url("/Images/southAfrica_L1.jpg");
+  background-image: url("/Images/hawaii2.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-attachment: fixed;
@@ -99,7 +100,7 @@ input {
 }
 
 .browse-package2 {
-  background-image: url("/Images/hotel_L1.jpg");
+  background-image: url("/Images/southAfrica_L1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -118,6 +119,13 @@ input {
   align-content: center;
 }
 
+.browse-package3 {
+  background-image: url("/Images/hawaii4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 400px;
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -138,10 +146,16 @@ input {
 
 .navbar li {
   float: left;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(48, 21, 21);
   text-align: center;
   padding: 5px;
   text-decoration: none;
+}
+
+.navbar-right {
+  float: right;
+  list-style-type: none;
+  padding-right: 5px;
 }
 
 .active {
@@ -161,7 +175,7 @@ input {
 }
 
 .white {
-  background-color: #ccf2f4;
+  background-color: rgba(134, 135, 132, 0.1);
   text-align: center;
   align-items: center;
   padding: 20px;
@@ -201,16 +215,28 @@ input {
 }
 
 .package-description {
-  padding: 0px 0px 0px 100px;
+  display: flex;
+  /* padding: 0px 0px 0px 100px; */
   display: inline-block;
-  font-size: 45px;
+  font-size: 1.5rem;
+  list-style-type: none;
+  align-content: center;
+  justify-content: center;
 }
 
 .package-content {
-  margin-left: 200px;
+  /* margin-left: 200px; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  display: inline-block;
 }
 
 .travel {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 2px solid rgba(95, 117, 142, 0.7);
 }
@@ -222,15 +248,4 @@ input {
 
 .hidden {
   display: none;
-}
-
-.button1,
-.button2 {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-}
-
-.agentName {
-  font-weight: bold;
 }

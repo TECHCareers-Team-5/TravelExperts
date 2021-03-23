@@ -1,6 +1,6 @@
 // Author - Grant van Boeschoten
 const mongoose = require("mongoose");
-// const uniqueValidator = require("mongoose-unique-validator");
+const uniqueValidator = require("mongoose-unique-validator");
 
 const mongoDB =
   "mongodb+srv://team5access:mostafa@cluster0.wspcn.mongodb.net/TravelExperts?retryWrites=true&w=majority";
@@ -16,7 +16,7 @@ db.once("open", function () {
   console.log("Mongoose is connected to the TravelExperts Database");
 });
 
-const customersSchema = new mongoose.Schema({
+const customerSchema = new mongoose.Schema({
   CustFirstName: {
     type: String,
     required: "First name is required",
@@ -78,4 +78,4 @@ const customersSchema = new mongoose.Schema({
 });
 
 // create a model Customers useing customersSchema
-module.exports.Customers = mongoose.model("Customers", customersSchema);
+module.exports.Customer = mongoose.model("Customer", customerSchema);
