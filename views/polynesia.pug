@@ -17,19 +17,22 @@ block content
             li Walking distance to the best sight seeing locations
             li Round Trip Flights Included
     div
+        button.button-cart.button-cart-purchase ADD TO CART
+    div
         h1.header.description-header CART
     .cart-row
         strong.cart-package.cart-header.cart-column PACKAGE
         strong.cart-price.cart-header.cart-column PRICE
         strong.cart-quantity.cart-header.cart-column QAUNTITY
-    .cart-row
-        .cart-package.cart-column
-            img(src="/images/thailand1.jpg", width="100", height="100")
-            span.package-name Polynesian Paradise
-        span.cart-price.cart-column $3000.00
-        .cart-quantity.cart-column
-            input.input-box(type="number", value="1")
-            button.button-cart(role="button") REMOVE
+    .cart-package-total
+        .cart-row
+            .cart-package.cart-column
+                img(src="/images/thailand1.jpg", width="100", height="100")
+                span.package-name Polynesian Paradise
+            span.cart-price.cart-column $3000.00
+            .cart-quantity.cart-column
+                input.input-box(type="number", value="1")
+                button.button-remove(role="button") REMOVE
         br
         .cart-total
             strong Total
