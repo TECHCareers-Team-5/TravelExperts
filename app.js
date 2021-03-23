@@ -5,15 +5,17 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 const pug = require("pug");
+const app = express();
 
-// const url = "mongodb://localhost:27017"; connected to Atlas instead via register model
+// -------------------------------------------------------------
+// For Passport.js
+require("./my-passport").init(app);
+
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const registerRouter = require("./routes/register");
 const packagesRouter = require("./routes/packages");
-
-const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
