@@ -187,7 +187,9 @@ input {
 }
 
 .contact-section {
-  text-align: center;
+  align-items: self-start;
+  justify-content: center;
+  display: flex;
 }
 
 .contact-header {
@@ -216,4 +218,19 @@ input {
 .hrstyle {
   border-style: dotted none none none;
   border-width: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button1,
+.button2 {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.agentName {
+  font-weight: bold;
 }
