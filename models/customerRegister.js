@@ -16,7 +16,7 @@ db.once("open", function () {
   console.log("Mongoose is connected to the TravelExperts Database");
 });
 
-const customerSchema = new mongoose.Schema({
+const customersSchema = new mongoose.Schema({
   CustFirstName: {
     type: String,
     required: "First name is required",
@@ -64,8 +64,13 @@ const customerSchema = new mongoose.Schema({
     type: String,
     required: "Email Address",
     trim: true,
+    validate: {
+      validator: function (v) {
+        return /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/.test(v);
+      },
+      message: (props) => `${props.value} is not a valid Email address.`,
+    },
   },
-
   password: {
     type: String,
     required: "Password is Required",
@@ -78,4 +83,4 @@ const customerSchema = new mongoose.Schema({
 });
 
 // create a model Customers useing customersSchema
-module.exports.Customer = mongoose.model("Customer", customerSchema);
+module.exports.Customer = mongoose.model("Customer", customersSchema);

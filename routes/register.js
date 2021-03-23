@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
-const { Customers } = require("../models/customerRegister");
-const { Package } = require("../models/package");
+const bcrypt = require("bcryptjs");
+const { Customer } = require("../models/customerRegister");
 
 /* GET users listing. */
 router.get("/signup", (req, res, next) => {
@@ -13,24 +13,30 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
-  console.log("Signup Endpoint");
-  const { Customer } = require("../models/customerRegister");
-  const newCustomer = new Customer(req.body);
-  newCustomer.save((err, result) => {
-    if (err) {
-      const errorArray = [];
-      const errorKeys = Object.keys(err.errors);
-      errorKeys.forEach((key) => errorArray.push(err.errors[key].message));
-      return res.render("signup", {
-        errors: errorArray,
+  console.log("signup endpoint");
+  bcrypt.hash(req.body.password, 10, (err, hashedPassword) => {
+    if (err) throw err;
+    // Replace the plain password with the hashed password
+    req.body.password = hashedPassword;
+    const newCustomer = new Customer(req.body);
+    newCustomer.save((err, result) => {
+      if (err) {
+        const errorArray = [];
+        const errorKeys = Object.keys(err.errors);
+        errorKeys.forEach((key) => errorArray.push(err.errors[key].message));
+        return res.render("register", {
+          errors: errorArray,
+        });
+      }
+      console.log(result);
+      res.render("response", {
+        fname: result.CustFirstName,
+        lname: result.CustLastName,
       });
-    }
-    console.log(result);
-    res.render("response", {
-      fname: result.CustFirstName,
-      lname: result.CustLastName,
     });
   });
+  //   res.send("Customer Registered, Database Updated");
+  //   next();
 });
 
 router.get("/package", function (req, res, next) {
@@ -38,10 +44,8 @@ router.get("/package", function (req, res, next) {
   Package.find(function (err, results) {
     if (err) return console.error(err);
     console.log(results[0].PkgName);
-    res.render("login", { title: "login" });
+    res.render("register", { title: "Register" });
   });
 });
-
-router.get("/agents", (req, res, next) => {});
 
 module.exports = router;
