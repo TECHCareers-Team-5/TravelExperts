@@ -10,9 +10,9 @@ router.get("/index", function (req, res, next) {
   res.render("index", { title: "Index" });
 });
 
-router.get("/packages", function (req, res, next) {
-  res.render("packages", { title: "packages" });
-});
+// router.get("/packages", function (req, res, next) {
+//   res.render("packages", { title: "packages" });
+// }); GV moved to packages router
 
 router.get("/contact", function (req, res, next) {
   res.render("contact", { title: "contact" });

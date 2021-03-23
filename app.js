@@ -11,6 +11,7 @@ const pug = require("pug");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const registerRouter = require("./routes/register");
+const packagesRouter = require("./routes/packages");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/register", registerRouter);
+app.use("/packages", packagesRouter);
 
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
