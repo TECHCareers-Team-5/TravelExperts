@@ -4,15 +4,17 @@ block content
   h1.header Your Journey Begins Here
   img(src='./Images/Globe blue on transparent.png')
   div
-  h2 Login
+    h2 Login
 
     form:post
         div
             label(for='CustHomePhone') Primary Phone Number
-            input( type='text' name='CustHomePhone' id='CustHomePhone' placeholder='XXX-XXX-XXXX' required='')
+            hr
+            input(style='width:30%' type='text' name='CustHomePhone' id='CustHomePhone' placeholder='XXX-XXX-XXXX' required='')
         div
             label(for='password') Password
-            input#password(type='password' name='password' required='' placeholder='Enter Password')
+            hr
+            input#password(style='width:30%' type='password' name='password' required='' placeholder='Enter Password')
         div
             button.button(type='submit' style='width:30%') SUBMIT
     

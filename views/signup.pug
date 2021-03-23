@@ -24,37 +24,48 @@ div
     form(action='/register' method='POST')
       div
         label(for='CustFirstName') First Name
-        input(type='text' name='CustFirstName' id='CustFirstName' placeholder='First Name' required='')
+        br
+        input(style='width:30%' type='text' name='CustFirstName' id='CustFirstName' placeholder='First Name' required='')
       div
         label(for='CustLastName') Last Name
-        input(type='text' name='CustLastName' id='CustLastName' required='' placeholder='Last Name')
+        br
+        input(style='width:30%' type='text' name='CustLastName' id='CustLastName' required='' placeholder='Last Name')
       div
         label(for='CustAddress') Street Address
-        input(type='text' name='CustAddress' id='CustAddress' required='' placeholder='Street Address')
+        br
+        input(style='width:30%' type='text' name='CustAddress' id='CustAddress' required='' placeholder='Street Address')
       div
         label(for='CustCity') City
-        input(type='text' name='CustCity' id='CustCity' required='' placeholder='City')
+        br
+        input(style='width:30%' type='text' name='CustCity' id='CustCity' required='' placeholder='City')
       div
         label(for='CustProv') Province
-        input(type='text' name='CustProv' id='CustProv' required='' placeholder='Province (Abreviation)')
+        br
+        input(style='width:30%' type='text' name='CustProv' id='CustProv' required='' placeholder='Province (Abreviation)')
       div
         label(for='CustPostal') Postal Code
-        input(type='text' name='CustPostal' id='CustPostal' required='' placeholder='Postal Code')
+        br
+        input(style='width:30%' type='text' name='CustPostal' id='CustPostal' required='' placeholder='Postal Code')
       div
         label(for='CustHomePhone') Primary Phone Number
-        input(type='text' name='CustHomePhone' id='CustHomePhone' placeholder='XXX-XXX-XXXX' required='')
+        br
+        input(style='width:30%' type='text' name='CustHomePhone' id='CustHomePhone' placeholder='XXX-XXX-XXXX' required='')
       div
         label(for='CustBusPhone') Business Phone Number
-        input(type='text' name='CustBusPhone' id='CustBusPhone' placeholder='XXX-XXX-XXXX')
+        br
+        input(style='width:30%' type='text' name='CustBusPhone' id='CustBusPhone' placeholder='XXX-XXX-XXXX')
       div
         label(for='CustEmail') Email
-        input#email(type='CustEmail' name='CustEmail' required='' placeholder='Email Address')
+        br
+        input#email(style='width:30%' type='CustEmail' name='CustEmail' required='' placeholder='Email Address')
       div
         label(for='password') Password
-        input#password(type='password' name='password' required='' placeholder='Enter Password')
+        br
+        input#password(style='width:30%' type='password' name='password' required='' placeholder='Enter Password')
       div
         label(for='AgentId') Agent ID (Please leave blank if you are not an Agent)
-        input(type='text' name='AgentId' id='AgentId' placeholder='00')
+        br
+        input(style='width:30%' type='text' name='AgentId' id='AgentId' placeholder='00')
       button.button(type='submit' style='width:30%') SUBMIT
   section
     .browse-package2
