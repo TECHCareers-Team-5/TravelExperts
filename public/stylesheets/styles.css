@@ -50,7 +50,7 @@ input {
 
 .button {
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(95, 117, 142, 1);
+  background-color: rgba(95, 117, 142, .5);
   border: 2px solid;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -60,23 +60,26 @@ input {
 .button:hover {
   box-shadow: none;
   border-color: rgba(117, 142, 79, 1);
+  background-color: rgba(95, 117, 142, 1);
+
 }
 
 .action {
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(117, 142, 79, 1);
+  background-color: rgba(117, 142, 79, .7);
   border: 2px solid rgba(1, 22, 56, 1);
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 40%;
-  padding: 5%;
+  padding: 10px;
   margin: 10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .action:hover {
   box-shadow: none;
   border-color: rgba(134, 135, 132, 1);
+  background-color: rgba(117, 142, 79, 1);
+
 }
 
 .browse-package {
@@ -168,7 +171,7 @@ input {
 }
 
 .white {
-  background-color: #ccf2f4;
+  background-color: rgba(134, 135, 132, 0.1);
   text-align: center;
   align-items: center;
   padding: 20px;
@@ -206,17 +209,29 @@ input {
 }
 
 .package-description {
-  padding: 0px 0px 0px 100px;
+  display: flex;
+  /* padding: 0px 0px 0px 100px; */
   display: inline-block;
-  font-size: 45px;
+  font-size: 1.5rem;
   list-style-type: none;
+  align-content: center;
+  justify-content: center;
 }
 
 .package-content {
-  margin-left: 200px;
+  /* margin-left: 200px; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  display: inline-block;
+
 }
 
 .travel {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 2px solid rgba(95, 117, 142, 0.7);
 }
@@ -224,71 +239,4 @@ input {
 .hrstyle {
   border-style: dotted none none none;
   border-width: 10px;
-}
-
-/*Packages*/
-.description-header {
-  text-align: center;
-}
-
-.package-details {
-  text-align: center;
-}
-
-.button-cart {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(95, 117, 142, 1);
-}
-
-.button-cart-purchase {
-  font-size: 1.75em;
-  text-align: center;
-}
-
-.cart-header {
-  font-weight: bold;
-  font-size: 15px;
-  color: black;
-}
-
-.cart-column {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid black;
-  margin-right: 1.5em;
-  padding-bottom: 10px;
-  margin-top: 10px;
-}
-
-.cart-row {
-  display: flex;
-}
-
-.cart-package {
-  width: 45%;
-}
-
-.cart-price {
-  width: 20%;
-}
-
-.cart-quantity {
-  width: 35%;
-}
-
-.input-box {
-  width: 75px;
-  height: 10px;
-  margin-right: 25px;
-}
-
-.cart-total {
-  text-align: end;
-  padding-right: 45px;
-}
-
-.package-name {
-  font-size: 25px;
-  font-weight: bold;
-  margin-right: 55px;
 }
