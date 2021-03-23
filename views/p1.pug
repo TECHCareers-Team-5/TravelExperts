@@ -1,0 +1,10 @@
+extends template 
+block content 
+
+  each package in packages 
+    h2=package.PkgName 
+    h3=package.PkgDesc
+    h3=package.PkgStartDate 
+    h3= package.PkgEndDate
+    h2=package.PkgBasePrice
+    img(src='/Images/Globe blue on transparent.png' width="100px")
