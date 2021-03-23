@@ -17,57 +17,58 @@ header
       li.active
         a(href='contact') CONTACT
   h1.header TRAVEL EXPERTS
-  img(src='Images/Globe blue on transparent.png')
+
+  img(src='Images/Globe blue on transparent.png' alt='agentLogo')
 .contact-section
   .contact-calgary
     h3 CALGARY OFFICE
-    p ADDRESS: 111 CALGARY RD NW
-    p PHONE NUMBER: 111-111-1111
-    p EMAIL: CALGARYOFFICE@CALGARY.COM
-    p BUSINESS HOURS: Monday - Saturday  9:30 - 15:00
-    p EMERGENCY CONTACT NUMBER: 1-800-123-4567
-    button.button(onclick='myFunction1()') Show Calgary Office Agents Info
-    #myDIV1.hidden 
+    p Address: 111 Calgary RD NW
+    p Phone: 111-111-1111
+    p Email: CALGARYOFFICE@CALGARY.COM
+    button.button1(onclick='myFunction1()')
+      | Calgary Office Agents Info
+    #myDIV1.hidden
       br
-      |   Janet Delton 
+      p.agentName Dennis C. Reynolds
       br
-      |   Phone Number: (403) 210-7801 
+      |       Junior Agent
       br
-      |   Email: janet.delton@travelexperts.com 
+      |       Phone: (403) 210-7843
       br
-      |   Position: Senior Agent
+      a(href='mailto:dennis.reynolds@travelexperts.com') Email: dennis.reynolds@travelexperts.com
       hr
-      |   Judy Lisle 
+      p.agentName Janet Delton
       br
-      |   Phone Number: (403) 210-7802 
+      |       Senior Agent
       br
-      |   Email: judy.lisle@travelexperts.com 
+      |       Phone: (403) 210-7801
       br
-      |   Position: Intermediate Agent
+      a(href='mailto:janet.delton@travelexperts.com') Email: janet.delton@travelexperts.com
       hr
-      |   Dennis C. Reynolds 
+      p.agentName Janice W. Dahl
       br
-      |   Phone Number: (403) 210-7843 
+      |       Senior Agent 
       br
-      |   Email: dennis.reynolds@travelexperts.com 
+      |       Phone: (403) 210-7865
       br
-      |   Position: Junior Agent
+      a(href='mailto:janice.dahl@travelexperts.com') Email: janice.dahl@travelexperts.com
       hr
-      |   John Coville
+      p.agentName John Coville
       br
-      |   Phone Number: (403) 210-7823
+      |       Intermediate Agent
       br
-      |   Email: john.coville@travelexperts.com 
+      |       Phone: (403) 210-7823
       br
-      |   Position: Intermediate Agent
+      a(href='mailto:john.coville@travelexperts.com') Email: john.coville@travelexperts.com
       hr
-      |   Janice W. Dahl 
+      p.agentName Judy Lisle
       br
-      |   Phone Number: (403) 210-7865 
+      |       Intermediate Agent 
       br
-      |   Email: janice.dahl@travelexperts.com 
+      |       Phone: (403) 210-7802 
       br
-      |   Position: Senior Agent
+      a(href='mailto:judy.lisle@travelexperts.com') Email: judy.lisle@travelexperts.com
+
       hr
     script.
       function myFunction1() {
@@ -79,49 +80,48 @@ header
       }
       }
 
-
     // <img width="55%" src="images/Office Placeholder.png" />
   .contact-okotoks
     h3 OKOTOKS OFFICE
-    p ADDRESS: 111 OKOTOKS RD NW
-    p PHONE NUMBER: 111-222-2222
-    p EMAIL: OKOTOKSOFFICE@OKOTOKS.COM
-    p BUSINESS HOURS: Monday - Saturday  9:00 - 16:00
-    p EMERGENCY CONTACT NUMBER: 1-800-222-3333
-    button.button(onclick='myFunction2()') Show Okotoks Office Agents Info
-    #myDIV2.hidden 
+    p Address: 111 Okotoks RD NW
+    p Phone: 111-222-2222
+    p Email: OKOTOKSOFFICE@OKOTOKS.COM
+    button.button2(onclick='myFunction2()')
+      | Okotoks Office Agents Info
+    #myDIV2.hidden
       br
-      |   Bruce J. Dixon 
+      p.agentName Beverly S. Jones
       br
-      |   Phone Number: (403) 210-7867
+      | Intermediate Agent
       br
-      |   Email: bruce.dixon@travelexperts.com
+      |       Phone: (403) 210-7812
       br
-      |   Position: Intermediate Agent
+      a(href='mailto:beverly.jones@travelexperts.com') Email: beverly.jones@travelexperts.com
       hr
-      |   Beverly S. Jones 
+      p.agentName Brian S. Peterson
       br
-      |   Phone Number: (403) 210-7812
+      | Junior Agent
       br
-      |   Email: beverly.jones@travelexperts.com
+      |       Phone: (403) 210-7833
       br
-      |   Position: Intermediate Agent
+      a(href='mailto:brian.peterson@travelexperts.com') Email: brian.peterson@travelexperts.com
       hr
-      |   Jane Merrill
+      p.agentName Bruce J. Dixon
       br
-      |   Phone Number: (403) 210-7868
+      | Intermediate Agent
       br
-      |   Email: jane.merrill@travelexperts.com
+      |       Phone: (403) 210-7867
       br
-      |   Position: Senior Agent
+      a(href='mailto:bruce.dixon@travelexperts.com') Email: bruce.dixon@travelexperts.com
       hr
-      |   Brian S. Peterson
+      p.agentName Jane Merrill
       br
-      |   Phone Number: (403) 210-7833
+      | Senior Agent
       br
-      |   Email: brian.peterson@travelexperts.com
+      |       Phone: (403) 210-7868
       br
-      |   Position: Junior Agent
+      a(href='mailto:jane.merrill@travelexperts.com') Email: jane.merrill@travelexperts.com
+
       hr
     script.
       function myFunction2() {
@@ -135,4 +135,4 @@ header
     // <img width="55%" src="Images/Office Placeholder 2.png" />
 footer.main-footer
   div
-    p &#169 copy 2020 Travel Experts Inc
+    p &copy; copy 2020 Travel Experts Inc
