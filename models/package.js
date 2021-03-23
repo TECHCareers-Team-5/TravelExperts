@@ -1,6 +1,6 @@
 // Author - Grant van Boeschoten
 const mongoose = require("mongoose");
-// const uniqueValidator = require("mongoose-unique-validator");
+const uniqueValidator = require("mongoose-unique-validator");
 
 const mongoDB =
   "mongodb+srv://team5access:mostafa@cluster0.wspcn.mongodb.net/TravelExperts?retryWrites=true&w=majority";
@@ -43,13 +43,12 @@ PkgAgencyCommission
 
 const packageSchema = new mongoose.Schema({
   PackageId: {
-    type: Number
+    type: Number,
   },
 
   PkgName: {
-    type: String
-  }
-
+    type: String,
+  },
 });
 
 // create a model Customers useing customersSchema
