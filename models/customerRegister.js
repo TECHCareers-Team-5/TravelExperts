@@ -16,7 +16,7 @@ db.once("open", function () {
   console.log("Mongoose is connected to the TravelExperts Database");
 });
 
-const customersSchema = new mongoose.Schema({
+const customerSchema = new mongoose.Schema({
   CustFirstName: {
     type: String,
     required: "First name is required",
@@ -78,4 +78,4 @@ const customersSchema = new mongoose.Schema({
 });
 
 // create a model Customers useing customersSchema
-module.exports.Customers = mongoose.model("Customer", customersSchema);
+module.exports.Customer = mongoose.model("Customer", customerSchema);
