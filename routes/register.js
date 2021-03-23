@@ -4,7 +4,7 @@ const { Customers } = require("../models/customerRegister");
 const { Package } = require("../models/package");
 
 /* GET users listing. */
-router.use("/signup", (req, res, next) => {
+router.get("/signup", (req, res, next) => {
   res.render("signup", { title: "Sign Up" });
 });
 
@@ -12,9 +12,11 @@ router.get("/", (req, res, next) => {
   res.render("login", { title: "Login" });
 });
 
-router.post("/signup/", (req, res, next) => {
+router.post("/signup", (req, res, next) => {
+  console.log("Signup Endpoint");
   const { Customer } = require("../models/customerRegister");
-  Customer.save((err, result) => {
+  const newCustomer = new Customer(req.body);
+  newCustomer.save((err, result) => {
     if (err) {
       const errorArray = [];
       const errorKeys = Object.keys(err.errors);
@@ -23,10 +25,11 @@ router.post("/signup/", (req, res, next) => {
         errors: errorArray,
       });
     }
-    res.console.log(Customer);
-    res.send(
-      `New Account Created for ${result.CustFirstName} ${result.CustLastName}.`
-    );
+    console.log(result);
+    res.render("response", {
+      fname: result.CustFirstName,
+      lname: result.CustLastName,
+    });
   });
 });
 
@@ -38,5 +41,7 @@ router.get("/package", function (req, res, next) {
     res.render("login", { title: "login" });
   });
 });
+
+router.get("/agents", (req, res, next) => {});
 
 module.exports = router;
