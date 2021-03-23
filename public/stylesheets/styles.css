@@ -32,11 +32,12 @@ footer {
   text-align: center;
 }
 
-header {
+.header {
   padding-top: 50px;
   text-align: center;
   align-items: center;
   min-height: 200px;
+  justify-items: center;
 }
 
 input {
@@ -70,7 +71,7 @@ input {
   width: 40%;
   padding: 5%;
   margin: 10px;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .action:hover {
@@ -167,12 +168,28 @@ input {
 }
 
 .white {
-  background-color: #ccf2f4;
+  
   text-align: center;
   align-items: center;
   padding: 20px;
   color: rgba(1, 22, 56, 1);
   min-height: 300px;
+}
+
+.container {
+  display: grid;
+  width: minmax(640px, 1000px);
+  justify-items: center;
+  justify-content: center;
+  grid-column: 1 / -1;
+  grid-template-rows: repeat(4, 400px);
+  grid-column-gap: 15px;
+  align-content: stretch;
+  
+}
+
+.gridA {
+
 }
 
 #register {
