@@ -1,8 +1,13 @@
 extend template 
 block content 
-    h1 Results 
+    h1 Welcome to Travel Experts 
+        h3 You Are Now Registered 
 
         h2 First
             h3=fname 
         h2 Last 
             h3=lname
+
+    h3 Continue on to the Login Page 
+        a(href='/login')
+          button.button(type='button') Login &#x25BA;

@@ -1,6 +1,6 @@
 // Author - Ping
 const mongoose = require("mongoose");
-// const uniqueValidator = require("mongoose-unique-validator");
+const uniqueValidator = require("mongoose-unique-validator");
 
 const mongoDB =
   "mongodb+srv://team5access:mostafa@cluster0.wspcn.mongodb.net/TravelExperts?retryWrites=true&w=majority";
@@ -13,7 +13,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 
 db.once("open", function () {
-  console.log("Mongoose is connected to the TravelExperts Database");
+  console.log("Mongoose is connected to the TravelExperts Database AGENTS");
 });
 
 const agentSchema = new mongoose.Schema({
@@ -28,11 +28,6 @@ const agentSchema = new mongoose.Schema({
     required: "Last name is required",
     trim: true,
   },
-
-  AgtMiddleInitial: {
-    type: null,
-    trim: true,
-  }, 
 
   AgtLastName: {
     type: String,
@@ -67,4 +62,4 @@ const agentSchema = new mongoose.Schema({
 });
 
 // create a model Agents useing agentSchema
-module.exports.Agents = mongoose.model("Agents", agentSchema);
+module.exports.Agent = mongoose.model("Agent", agentSchema);
