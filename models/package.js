@@ -17,13 +17,13 @@ db.once("open", function () {
 });
 
 const packageSchema = new mongoose.Schema({
-  PackageId: {
-    type: Number,
-  },
-
-  PkgName: {
-    type: String,
-  },
+  PackageId: Number,
+  PkgName: String,
+  PkgStartDate: Date,
+  PkgEndDate: Date,
+  PkgDesc: String,
+  PkgBasePrice: Number,
+  PkgAgencyCommission: Number,
 });
 
 // create a model Customers useing customersSchema
