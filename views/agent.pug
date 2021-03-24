@@ -1,0 +1,50 @@
+extends agenttemp
+block content 
+
+  if errors 
+    ul 
+      each error in errors 
+        li= error
+
+  h1.header Agent Login
+  img(src='/Images/Globe blue on transparent.png')
+  div
+    section
+      div
+        #register
+          form(action='/agents' method='POST')
+            div
+              label(for='AgtEmail') Agent Email
+              input#AgentID(name='AgtEmail' placeholder='agent@travelexperts.com' required='')
+            div
+              label(for='Password') Password
+              input#password(type='password' name='Password' required='' placeholder='Password')
+            br
+            br
+            button.action(type='submit' style='width:30%') SUBMIT
+  div.hidden
+    h3 Add a hidden class here
+    div
+      h2 Search Customer by Phone Number 
+      form(action="/agent/data" method='POST')
+            label(for='CustHomePhone') Enter Customer Home Phone Number
+            br
+            input(style='width:30%' type='text' name='CustHomePhone' id='CustHomePhone' placeholder='XXX-XXX-XXXX' required='')
+            button.button(type='submit') SUBMIT 
+    div
+      h2 Search Package by Name 
+      form(action='/agent/package')
+        input#male(type='radio' name='gender' value='male')
+        label(for='male') Male
+        br
+        input#female(type='radio' name='gender' value='female')
+        label(for='female') Female
+        br
+        input#other(type='radio' name='gender' value='other')
+        label(for='other') Other
+        
+    
+
+
+    
+

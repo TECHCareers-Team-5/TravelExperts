@@ -1,0 +1,25 @@
+extend template
+block content 
+
+each booking in agents 
+    img(src="/images/cruise1.jpg", alt="booking.CustomerFirstName")
+    h1 Bookings
+    h2 card-title= CustomerFirstName
+    p.card-text 
+        | #{booking.CustomerFirstName}
+    p.card-text 
+        | #{booking.CustomerLastName}
+    p.card-text 
+        | #{booking.CustomerAddress}
+    p.card-text 
+        | #{booking.CustCity}
+    p.card-text 
+        | #{booking.CustCountry}
+    p.card-text 
+        | #{booking.CustHomePhone}
+    p.card-text 
+        small.text.muted= bookings.BkgID 
+    a.btn.btn-primary(href='/bookings'+booking.bookingId)Details
+
+
+

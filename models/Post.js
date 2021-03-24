@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-// const uniqueValidator = require("mongoose-unique-validator");
+const uniqueValidator = require("mongoose-unique-validator");
 
 var mongoDB = "mongodb://127.0.0.1/registerDB";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
