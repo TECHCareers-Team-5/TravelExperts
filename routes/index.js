@@ -6,10 +6,6 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Index" });
 });
 
-router.get("/index", function (req, res, next) {
-  res.render("index", { title: "Index" });
-});
-
 // router.get("/packages", function (req, res, next) {
 //   res.render("packages", { title: "packages" });
 // }); GV moved to packages router

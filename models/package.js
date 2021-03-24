@@ -24,6 +24,9 @@ const packageSchema = new mongoose.Schema({
   PkgDesc: String,
   PkgBasePrice: Number,
   PkgAgencyCommission: Number,
+  Img1: String,
+  Img2: String,
+  Img3: String,
 });
 
 // create a model Customers useing customersSchema
