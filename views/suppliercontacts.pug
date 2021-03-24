@@ -1,20 +1,9 @@
 extends template 
-block content 
-
-  each suppliercontact in suppliercontacts
-    h3=suppliercontact.SupConCompany
-    h3=suppliercontact.SupConFirstName
-    h3=suppliercontact.SupConLastName
-    h3=suppliercontact.SupConBusPhone
-    h3=suppliercontact.SupConFax
-    h3=suppliercontact.SupConEmail
-    h3=suppliercontact.SupConAddress
-    h3=suppliercontact.SupConCity
-    h3=suppliercontact.SupConProv
-    h3=suppliercontact.SupConPostal
-    h3=suppliercontact.SupConCountry
-    h3=suppliercontact.SupConURL
-
-
-
-    img(src='/Images/Globe blue on transparent.png' width="100px")
+block content
+    
+      h1="Supplier Company:"
+        each suppliercontact in suppliercontacts
+          ul 
+            ol
+              a(href='/suppliercontacts/' + suppliercontact.SupplierContactId style='font-size: 50%') #{suppliercontact.SupConCompany}
+              hr
