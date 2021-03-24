@@ -35,7 +35,7 @@ app.use("/register", registerRouter);
 app.use("/packages", packagesRouter);
 app.use("/agent", agentRouter);
 app.use("/suppliercontacts", suppliercontactsRouter);
-app.use("/bookingdetails", bookingdetailRouter);
+app.use("/bookingdetails", bookingdetailsRouter);
 
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {

@@ -1,9 +1,9 @@
 extends template 
 block content
     
-      h1="Booking Details:"
+      h1="Booking Details ID:"
         each bookingdetail in bookingdetails
           ul 
             ol
-              a(href='/bookingdetails/' + bookingdetail.BookingDetailId style='font-size: 50%') #{bookingdetail.BookingDetailID}
+              a(href='/bookingdetails/' + bookingdetail.BookingDetailId style='font-size: 50%') #{bookingdetail.BookingDetailId}
               hr
