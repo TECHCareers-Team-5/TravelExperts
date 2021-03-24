@@ -1,0 +1,35 @@
+extends packtemplate 
+block content 
+
+    h1= package.PkgName
+        div
+          img.packageImage(src='/Images/' + package.Img1 alt=package.PkgDesc)
+          img.packageImage(src='/Images/' + package.Img2 alt=package.PkgDesc)
+          img.packageImage(src='/Images/' + package.Img3 alt=package.PkgDesc)
+
+
+    h2=package.PkgDesc
+    h3=package.PkgStartDate 
+    h3= package.PkgEndDate
+    h2 $ #{package.PkgBasePrice}
+    div
+      h2.header.description-header CART
+      .cart-row
+          strong.cart-package.cart-header.cart-column PACKAGE
+          strong.cart-price.cart-header.cart-column PRICE
+          strong.cart-quantity.cart-header.cart-column QAUNTITY
+      .cart-row
+          .cart-package.cart-column
+            span.package-name.package.PkgName
+          span.cart-price.cart-column $ #{package.PkgBasePrice}
+          .cart-quantity.cart-column
+              input.input-box(name="quantity" type="number", value="1")
+              button.button-cart(role="button") REMOVE
+          br
+      .cart-total
+          strong Total
+          span (#{package.PkgBasePrice}*quanity)
+      br
+      div
+          button.button-cart.button-cart-purchase(role="button") PURCHASE
+    

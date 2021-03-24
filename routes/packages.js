@@ -29,4 +29,25 @@ router.get("/p1", (req, res, next) => {
   });
 });
 
+router.get("/fee", (req, res, next) => {
+  const { Fee } = require("../models/fees");
+  Fee.find((err, fees) => {
+    res.render("fee", { fees: fees });
+  });
+});
+
+router.get("/p1/:pkgId", (req, res, next) => {
+  const pkgId = req.params.pkgId;
+  const query = { PackageId: pkgId };
+  console.log(query);
+  console.log(pkgId);
+  Package.findOne(query, (err, package) => {
+    if (err) {
+      console.log(err);
+      next(err);
+    }
+    res.render("pid", { package });
+  });
+});
+
 module.exports = router;

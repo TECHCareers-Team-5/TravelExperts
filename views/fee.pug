@@ -1,0 +1,9 @@
+extends template 
+block content 
+
+  h1 Fees
+
+  each fee in fees 
+    h2=fee.FeeName 
+    h3=fee.FeeAmt
+    img(src='/Images/Globe blue on transparent.png' width="100px")
