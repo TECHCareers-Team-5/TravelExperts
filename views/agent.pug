@@ -1,5 +1,10 @@
-extends template 
+extends agenttemp
 block content 
+
+  if errors 
+    ul 
+      each error in errors 
+        li= error
 
   h1.header Agent Login
   img(src='/Images/Globe blue on transparent.png')
@@ -17,7 +22,7 @@ block content
             br
             br
             button.action(type='submit' style='width:30%') SUBMIT
-  div
+  div.hidden
     h3 Add a hidden class here
     div
       h2 Search Customer by Phone Number 
