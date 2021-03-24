@@ -6,7 +6,7 @@ block content
   div
     h2 Login
 
-    form:post
+    form(action='/login' method='POST')
         div
             label(for='CustHomePhone') Primary Phone Number
             hr
@@ -16,7 +16,7 @@ block content
             hr
             input#password(style='width:30%' type='password' name='password' required='' placeholder='Enter Password')
         div
-            button.button(type='submit' style='width:30%') SUBMIT
+            button.button(type='submit' style='width:30%' ) SUBMIT
     
     h3 New to Travel Experts?
         div 
