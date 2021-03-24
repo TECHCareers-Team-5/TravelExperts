@@ -17,6 +17,7 @@ const registerRouter = require("./routes/register");
 const packagesRouter = require("./routes/packages");
 const agentRouter = require("./routes/agentrouter");
 const suppliercontactsRouter = require("./routes/suppliercontacts");
+const bookingdetailsRouter = require("./routes/bookingdetails");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -34,6 +35,7 @@ app.use("/register", registerRouter);
 app.use("/packages", packagesRouter);
 app.use("/agent", agentRouter);
 app.use("/suppliercontacts", suppliercontactsRouter);
+app.use("/bookingdetails", bookingdetailsRouter);
 
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
