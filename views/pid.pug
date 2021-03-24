@@ -17,14 +17,15 @@ block content
       .cart-row
           strong.cart-package.cart-header.cart-column PACKAGE
           strong.cart-price.cart-header.cart-column PRICE
-          strong.cart-quantity.cart-header.cart-column QAUNTITY
+          strong.cart-quantity.cart-header.cart-column QUANTITY
       .cart-row
           .cart-package.cart-column
             span.package-name.package.PkgName
           span.cart-price.cart-column $ #{package.PkgBasePrice}
-          .cart-quantity.cart-column
-              input.input-box(name="quantity" type="number", value="1")
+          .cart-quantity.cart-column.right
+              input.input-box(name="quantity" type="number", value="0")
               button.button-cart(role="button") REMOVE
+              button.button-cart(role="button") ADD
           br
       .cart-total
           strong Total
