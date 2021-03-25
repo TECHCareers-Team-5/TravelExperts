@@ -22,7 +22,7 @@ router.get("/auth/cust", (req, res, next) => {
 
 router.get("/auth/cust/:custID", (req, res, next) => {
   const info = req.params.custID;
-  const query = { Customer: CustomerId };
+  const query = { Customer: info };
   console.log(query);
   console.log(info);
   Customer.find(query, (err, result) => {

@@ -1,0 +1,74 @@
+doctype html
+head
+  title Travel Experts
+  meta(name='description' content='This is the description')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,500&family=Raleway:ital,wght@0,100;0,400;0,700;1,100&display=swap')
+  link(rel='stylesheet' href='/stylesheets/styles.css')
+header
+  nav
+    ul.navbar
+      li
+        a(href='/') HOME
+      li.active
+        a(href='packages') PACKAGES
+      li
+        a(href='register') REGISTER
+      li
+        a(href='contact') CONTACT
+  h1.header Packages
+  img(src='Images/Globe blue on transparent.png')
+div
+  hr.hrstyle
+  .package-content
+    img.travel(width='40%' height='40%' src='Images/caribbean.jpg')
+    ul.package-description
+      h1 Caribbean New Year
+      li Start Date: December 25th 
+      li End Date: January 4th
+      li Price: $4800.00 
+      li
+        a(href='/packages/carribean')
+          button.button(type='button') SELECT &#x25BA;
+          p
+  hr.hrstyle
+  .package-content
+    img.travel(width='40%' src='Images/thailand1.jpg')
+    ul.package-description
+      h1 Polynesian Paradise
+      li Start Date: December 12th
+      li End Date: December 20th
+      li Price: $3000.00
+      li
+        a(href='/packages/polynesia')
+          button.button(type='button') SELECT &#x25BA;
+          p
+  hr.hrstyle
+  .package-content
+    img.travel(width='40%' src='Images/thailand2.jpg')
+    ul.package-description
+      h1 Asian Expedition
+      li Start Date: May 14th
+      li End Date: May 28th
+      li Price: $2800.00 
+      li
+        a(href='/packages/asian')
+          button.button(type='button') SELECT &#x25BA;
+          p
+hr.hrstyle
+.package-content
+    img.travel(width='40%' src='Images/germany1.jpg')
+    ul.package-description
+      h1 European Vacation
+      li Start Date: November 1st
+      li End Date: November 14th
+      li Price: $3000.00 
+      li
+        a(href='/packages/europe')
+          button.button(type='button') SELECT &#x25BA;
+          p
+div
+  footer.main-footer
+    div
+      p
+        | &#169 copy 2020 Travel Experts Inc

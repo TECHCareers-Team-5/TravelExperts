@@ -17,7 +17,9 @@ db.once("open", function () {
 });
 
 const customersSchema = new mongoose.Schema({
-  CustomerId: String,
+  CustomerId: {
+    type: Number,
+  },
 
   CustFirstName: {
     type: String,
