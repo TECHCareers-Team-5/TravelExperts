@@ -17,6 +17,8 @@ db.once("open", function () {
 });
 
 const customersSchema = new mongoose.Schema({
+  CustomerId: String,
+
   CustFirstName: {
     type: String,
     required: "First name is required",

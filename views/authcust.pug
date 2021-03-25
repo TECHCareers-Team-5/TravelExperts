@@ -1,17 +1,13 @@
 extends agenttemp
 block content 
 
-  h1.header Agent Login
-  img(src='/Images/Globe blue on transparent.png')
-  div.white
-    h2 What do you want to start your search?
-    ol
-      li
-        a(href='/auth/cust') Customer Database
-      li
-        a(href='/auth/pack') Packages Database 
+  h1.header Customer Database
+  div   
+    each customer in customers
+      ul 
+        ol
+          a(href='agent/auth/cust/' + customer.CustomerId style='font-size: 1rem') #{customer.CustLastName}, #{customer.CustFirstName}
 
-    div 
       
         
     
